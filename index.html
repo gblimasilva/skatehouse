@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SkateHouse</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><img src="img/casa_skate.png" width="100" height="100"></a>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="sobre.html"class="active">Sobre</a></li>
+            <li><a href="contato.html" class="active">Contatos</a></li> 
+        </ul>
+    </header>
+    <section>
+        <img src="img/bg_skate.png" id="bg_skate">
+        <img src="img/skate.png" id="skate" height="20" width="20">
+        <img src="img/skate_plaza.png" id="skate_plaza" height="20" width="20">
+        <h2 id="text">SkateHouse</h2>
+        <a href="#sec" id="btn">Saiba mais</a>
+    </section>
+    <div class="sec" id="sec">
+        <h2>Serviços Principais</h2>
+        <a href="mogi.html" id="btn2"><img src="img/pista_mogi.jpg"  height="150" width="150" ></a>
+        <a href="chuvisco.html" id="btn2"><img src="img/pista_chuvisco.jpg"  height="150" width="150" ></a>
+        <a href="sbc.html" id="btn2"><img src="img/pista_sbc.jpg"  height="150" width="150" ></a>
+    </div>
+    <script>
+        let bg_skate = document.getElementById('bg_skate')
+        let skate = document.getElementById('skate')
+        let skate_plaza = document.getElementById('skate_plaza')
+        let text = document.getElementById('text')
+        let btn = document.getElementById('btn')
+        let btn2 = document.getElementById('btn2')
+        let header = document.querySelector('header');
+
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            bg_skate.style.left = value * 0.25 + 'px';
+            skate.style.top = value * 1.5 + 'px';
+            skate_plaza.style.top = value * 0.5 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+</body>
+</html>
